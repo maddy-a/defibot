@@ -1,0 +1,126 @@
+<html>
+<style>
+    #customers, #allSales {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td, #allSales td, #customers th, #allSales th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even), #allSales tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover, #allSales tr:hover {background-color: #ddd;}
+
+    #customers th, #allSales th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+    hr.new5 {
+        border: 2px solid #04AA6D;
+        border-radius: 5px;
+    }
+    p.empty {
+        word-spacing: 40px;
+    }
+    p.status {
+        color: #04AA6D;
+    }
+    p.error {
+        color: red;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="admin.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Private Sale Admin Dashboard</h1>
+            <table style="width:100%" id="customers">
+                <tr>
+                    <th>Token-Name</th>
+                    <th>Token-Symbol</th>
+                    <th>Decimals</th>
+                    <th>Total Supply</th>
+                    <th>Status</th>
+                    <th>Private Sale Tokens</th>
+                    <th>Tokens Sold</th>
+                    <th>Tokens Price</th>
+                </tr>
+                <tr>
+                    <td id="token-name"></td>
+                    <td id="token-symbol"></td>
+                    <td id="decimals"></td>
+                    <td id="supply"></td>
+                    <td id="status"></td>
+                    <td id="available-tokens"></td>
+                    <td id="tokens-sold"></td>
+                    <td id="price"></td>
+                </tr>
+            </table>
+            <br/>
+            <div id="allSalesDiv">
+            <h1>Sales</h1>
+            <table style="width:100%" id="allSales">
+                <tr>
+                    <th>Investor Address</th>
+                    <th>Quatity</th>
+                    <th>Token Balance</th>
+                </tr>
+            </table>
+            </div>
+            <hr class="new5">
+            <p>Transaction Result: </p><p id="transaction-result" class="status"></p><p id="error-result" class="error"></p>
+            <hr class="new5">
+            <form id="whitelist">
+                <h2>White list</h2>
+                <div class="form-group">
+                    <label for="investorAddress">Investor Address</label>
+                    <input id="investorAddress" type="text" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <br/>
+            <form id="airDrop">
+                <h2>Air Drop</h2>
+                <button type="submit" class="btn btn-primary">Release</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <br/>
+            <form id="markICOASEnded">
+                <h2>End Private Sale</h2>
+                <button type="submit" class="btn btn-primary">End</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <br/>
+            <form id="withdraw">
+                <h2>Withdraw</h2>
+                <div class="form-group">
+                    <label for="withdrawalAccount">Withdraw Account</label>
+                    <input id="withdrawalAccount" type="text" class="form-control"></input>
+                    <label for="withdrawalAmount">Withdraw Amount</label>
+                    <input id="withdrawalAmount" type="number" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr class="new5">
+            <a href="/start.html">Start Sale Dashboard</a><br/>
+            <a href="/index.html">Investor Dashboard</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

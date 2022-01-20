@@ -1,0 +1,109 @@
+<html>
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+    hr.new5 {
+        border: 2px solid #04AA6D;
+        border-radius: 5px;
+    }
+    p.empty {
+        word-spacing: 40px;
+    }
+    p.status {
+        color: #04AA6D;
+    }
+    p.error {
+        color: red;
+    }
+</style>
+<body>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="bundle.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>ERC20 Token</h1>
+            <table style="width:100%" id="customers">
+                <tr>
+                    <th>Token-Name</th>
+                    <th>Token-Symbol</th>
+                    <th>Decimals</th>
+                    <th>Tokens Supply</th>
+                </tr>
+                <tr>
+                    <td id="token-name"></td>
+                    <td id="token-symbol"></td>
+                    <td id="decimals"></td>
+                    <td id="supply"></td>
+                </tr>
+            </table>
+            <br/>
+            <hr class="new5">
+            <p>Transaction Result: </p><p id="transaction-result" class="status"></p><p id="error-result" class="error"></p>
+            <hr class="new5">
+            <form id="transfer">
+                <h2>Transfer</h2>
+                <div class="form-group">
+                    <label for="to-address">Address</label>
+                    <input id="to-address" type="text" class="form-control"></input>
+                    <label for="transactionAmount">Amount</label>
+                    <input id="transactionAmount" type="number" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <br/>
+            <form id="approve">
+                <h2>Approve</h2>
+                <div class="form-group">
+                    <label for="approve-address">Spender Address</label>
+                    <input id="approve-address" type="text" class="form-control"></input>
+                    <label for="approveAmount">Allowance Amount</label>
+                    <input id="approveAmount" type="number" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <br/>
+            <form id="transferFrom">
+                <h2>Transfer From</h2>
+                <div class="form-group">
+                    <label for="sender-address">Senders Address</label>
+                    <input id="sender-address" type="text" class="form-control"></input>
+                    <label for="receipient-address">Receiver Address</label>
+                    <input id="receipient-address" type="text" class="form-control"></input>
+                    <label for="transfer-amount">Amount</label>
+                    <input id="transfer-amount" type="number" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

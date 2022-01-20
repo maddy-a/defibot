@@ -1,0 +1,28 @@
+{
+  "name": "day4-advanced-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "web3": "^1.2.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "@drizzle/store": "^1.5.3",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@thetalabs/theta-js": "0.0.57",
+    "@truffle/hdwallet-provider": "^1.6.0",
+    "bignumber.js": "^9.0.1"
+  }
+}

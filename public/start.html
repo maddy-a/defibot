@@ -1,0 +1,97 @@
+<html>
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+    hr.new5 {
+        border: 2px solid #04AA6D;
+        border-radius: 5px;
+    }
+    p.empty {
+        word-spacing: 40px;
+    }
+    p.status {
+        color: #04AA6D;
+    }
+    p.error {
+        color: red;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="start.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Private Sale</h1>
+            <table style="width:100%" id="customers">
+                <tr>
+                    <th>Token-Name</th>
+                    <th>Token-Symbol</th>
+                    <th>Decimals</th>
+                    <th>Total Supply</th>
+                    <th>Status</th>
+                    <th>Available Tokens</th>
+                    <th>Tokens Sold</th>
+                    <th>Tokens Price</th>
+                </tr>
+                <tr>
+                    <td id="token-name"></td>
+                    <td id="token-symbol"></td>
+                    <td id="decimals"></td>
+                    <td id="supply"></td>
+                    <td id="status"></td>
+                    <td id="available-tokens"></td>
+                    <td id="tokens-sold"></td>
+                    <td id="price"></td>
+                </tr>
+            </table>
+            <br/>
+            <form id="startPrivateSale">
+                <h2>Start Private Sale</h2>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <input id="duration" type="numb" class="form-control"></input>
+                    <label for="tokenPrice">Price</label>
+                    <input id="tokenPrice" type="number" class="form-control"></input>
+                    <label for="availableTokens">Available Tokens</label>
+                    <input id="availableTokens" type="number" class="form-control"></input>
+                    <label for="minPurchase">Min Purchase</label>
+                    <input id="minPurchase" type="number" class="form-control"></input>
+                    <label for="maxPurchase">Max Purchase</label>
+                    <input id="maxPurchase" type="number" class="form-control"></input>
+                </div>
+                <button type="submit" class="btn btn-primary">Start</button>
+            </form>
+            <br/>
+            <hr class="new5">
+            <p>Private Sale Status: </p><p id="privateSaleResult" class="status"></p><p id="error-result" class="error"></p>
+            <hr class="new5">
+            <a href="/admin.html">Admin Dashboard</a><br/>
+            <a href="/index.html">Investor Dashboard</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
